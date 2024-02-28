@@ -10,6 +10,7 @@ export default function useCart() {
     //enabled를 사용하면 useQuery를 동기적으로 사용
     //enabled에 값을 넣으면 그 값이 true일때 useQuery를 실행
 
+    //MyCart.jsx
     //CartStatus.jsx
     const cartQuery = useQuery(["carts", uid || ""], () => getCart(uid), {
         enabled: !!uid,

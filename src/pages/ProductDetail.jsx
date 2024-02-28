@@ -17,7 +17,7 @@ export default function ProductDetail() {
                 options,
             },
         },
-    } = useLocation();
+    } = useLocation(); //이동한 페이지에서 값을 가져옴
     const [success, setSuccess] = useState();
     const [selected, setSelected] = useState(options && options[0]);
     const handleSelect = (e) => setSelected(e.target.value);

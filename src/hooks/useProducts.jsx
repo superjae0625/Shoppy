@@ -7,11 +7,13 @@ export default function useProducts() {
     const queryClient = useQueryClient();
 
     //데이터를 get 하기 위한 api
+    //Products.jsx
     const productsQuery = useQuery(["products"], fetchProducts, {
         staleTime: 1000 * 60,
     });
 
     //값을 바꿀때 사용하는 api
+    //NewProduct.jsx
     //Unlike queries, mutations are typically used to
     //create/update/delete data or perform server side-effects.
     const addProduct = useMutation(
